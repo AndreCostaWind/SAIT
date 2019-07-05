@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="30">
+      <Unit0>
+        <Filename Value="SAIT.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="15"/>
+        <UsageCount Value="201"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="formsait.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formSait"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="1239"/>
+        <CursorPos X="13" Y="1251"/>
+        <FoldState Value=" T4602 TCj0H51 T8jC2E]83k40G5 pkSlD0G4 pjFjf0S3]92jc0K1 picjJ0l[94Yjg0=[R4PlG0T2]sFl70C116]TZlb0V4]9ajY03014 T6k502E]JewO05719 T1k8[n4[=44lA0F5]98kX0I4])6lW0a[T65oC0L21117]D0qX0O414 T0k9K2D[{K5WM72]S2i8(46 pidlcPTB[R5RoH8[94iZoB7]9ficg5C1[B4XkQHf3 pj1JTJB[}j5Mb{E1[I47Z{11[u45v*]ij3c:UB66[I4nMX[}Y5ckI{521 TMqQ43-"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="frmhelp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <CursorPos X="22" Y="9"/>
+        <UsageCount Value="190"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="uclasses.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmClasses"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uClasses"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="48" Y="37"/>
+        <FoldState Value=" T4601 T7DGL T8S22]D3i20g5 piZk30M T6i3083 T1iC0W6 T0iFb2E]WXjQb44j"/>
+        <UsageCount Value="175"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="uglobalvars.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uGlobalVars"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="11"/>
+        <UsageCount Value="173"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="frmsobre.pas"/>
+        <ComponentName Value="frmSobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmSobre"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="46" Y="30"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\..\BibliotecasDesenvolvimento\BGRABitmapDelphi-master\bgragraphics.pas"/>
+        <UnitName Value="BGRAGraphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="66" Y="43"/>
+        <UsageCount Value="4"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\..\BibliotecasDesenvolvimento\bgrabitmap-master\bgrabitmap\bgrabitmaptypes.pas"/>
+        <UnitName Value="BGRABitmapTypes"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1154"/>
+        <CursorPos X="24" Y="1165"/>
+        <UsageCount Value="4"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\..\BibliotecasDesenvolvimento\bgrabitmap-master\bgrabitmap\bgrabitmappack.pas"/>
+        <UnitName Value="BGRABitmapPack"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="11"/>
+        <UsageCount Value="4"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\BibliotecasDesenvolvimento\Pascal\bgracontrols-master\bgraimagemanipulation.pas"/>
+        <UnitName Value="BGRAImageManipulation"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2484"/>
+        <CursorPos Y="2651"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="rotinasTela.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="51" Y="19"/>
+        <UsageCount Value="5"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1555"/>
+        <CursorPos Y="1566"/>
+        <UsageCount Value="6"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\interfaces\win32\win32listsl.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="142"/>
+        <CursorPos Y="153"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\include\statuspanels.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <CursorPos Y="27"/>
+        <UsageCount Value="1"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\interfaces\win32\win32memostrings.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="107"/>
+        <CursorPos Y="118"/>
+        <UsageCount Value="1"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\ProgramData\LazarusPascal\components\lazutils\laz2_dom.pas"/>
+        <UnitName Value="Laz2_DOM"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1621"/>
+        <CursorPos Y="1640"/>
+        <UsageCount Value="11"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\include\customcheckbox.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="65"/>
+        <CursorPos Y="89"/>
+        <UsageCount Value="3"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5380"/>
+        <CursorPos Y="5398"/>
+        <UsageCount Value="5"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\interfaces\win32\win32wsstdctrls.pp"/>
+        <UnitName Value="Win32WSStdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="704"/>
+        <CursorPos Y="722"/>
+        <UsageCount Value="5"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\include\customlistbox.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="296"/>
+        <CursorPos Y="315"/>
+        <UsageCount Value="5"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="93"/>
+        <CursorPos Y="123"/>
+        <UsageCount Value="5"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2646"/>
+        <CursorPos Y="2675"/>
+        <UsageCount Value="5"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\interfaces\win32\win32wsforms.pp"/>
+        <UnitName Value="Win32WSForms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="369"/>
+        <CursorPos Y="387"/>
+        <UsageCount Value="5"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="381"/>
+        <CursorPos Y="407"/>
+        <UsageCount Value="5"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\include\picture.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="484"/>
+        <CursorPos Y="494"/>
+        <UsageCount Value="6"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\lclproc.pas"/>
+        <UnitName Value="LCLProc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="905"/>
+        <CursorPos Y="916"/>
+        <UsageCount Value="6"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\ProgramData\LazarusPascal\lcl\include\customimage.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos Y="46"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="uLkJSON.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="846"/>
+        <CursorPos X="22" Y="827"/>
+        <UsageCount Value="21"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\ProgramData\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7425"/>
+        <CursorPos Y="7443"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\ProgramData\lazarus\lcl\include\brush.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos Y="38"/>
+        <UsageCount Value="10"/>
+      </Unit29>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1249" TopLine="1244"/>
+      </Position1>
+      <Position2>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1250" TopLine="1244"/>
+      </Position2>
+      <Position3>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1252" TopLine="1244"/>
+      </Position3>
+      <Position4>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1253" TopLine="1244"/>
+      </Position4>
+      <Position5>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1255" TopLine="1247"/>
+      </Position5>
+      <Position6>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1256" TopLine="1247"/>
+      </Position6>
+      <Position7>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1257" TopLine="1247"/>
+      </Position7>
+      <Position8>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1258" TopLine="1247"/>
+      </Position8>
+      <Position9>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1259" TopLine="1247"/>
+      </Position9>
+      <Position10>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1260" TopLine="1247"/>
+      </Position10>
+      <Position11>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1261" TopLine="1247"/>
+      </Position11>
+      <Position12>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1262" TopLine="1247"/>
+      </Position12>
+      <Position13>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1263" TopLine="1247"/>
+      </Position13>
+      <Position14>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1260" TopLine="1247"/>
+      </Position14>
+      <Position15>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1261" TopLine="1247"/>
+      </Position15>
+      <Position16>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1262" TopLine="1247"/>
+      </Position16>
+      <Position17>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1263" TopLine="1247"/>
+      </Position17>
+      <Position18>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1260" TopLine="1247"/>
+      </Position18>
+      <Position19>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1261" TopLine="1247"/>
+      </Position19>
+      <Position20>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1262" TopLine="1247"/>
+      </Position20>
+      <Position21>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1263" TopLine="1247"/>
+      </Position21>
+      <Position22>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1260" TopLine="1247"/>
+      </Position22>
+      <Position23>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1248" Column="52" TopLine="1230"/>
+      </Position23>
+      <Position24>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1245" TopLine="1230"/>
+      </Position24>
+      <Position25>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1252" TopLine="1242"/>
+      </Position25>
+      <Position26>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1245" TopLine="1238"/>
+      </Position26>
+      <Position27>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1251" Column="27" TopLine="1238"/>
+      </Position27>
+      <Position28>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1254" Column="74" TopLine="1238"/>
+      </Position28>
+      <Position29>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1250" Column="48" TopLine="1230"/>
+      </Position29>
+      <Position30>
+        <Filename Value="formsait.pas"/>
+        <Caret Line="1255" Column="62" TopLine="1230"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="begin"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>
