@@ -49,57 +49,75 @@ object frmClasses: TfrmClasses
   }
   OnShow = FormShow
   Position = poOwnerFormCenter
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.0.2.0'
   object lstClass: TListBox
     Left = 16
     Height = 208
+    Hint = 'Click here to select the object class.'#13#10'If the class is not here, include one.'
     Top = 16
     Width = 304
     ItemHeight = 0
     OnClick = lstClassClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
   end
   object btnSelect: TButton
     Left = 16
     Height = 25
+    Hint = 'Accept the selected class above and close this window.'
     Top = 272
     Width = 75
     Caption = 'Select'
     OnClick = btnSelectClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
   end
   object btnCancel: TButton
     Left = 112
     Height = 25
+    Hint = 'Cancel the operation and close this window.'
     Top = 272
     Width = 75
     Caption = 'Cancel'
     OnClick = btnCancelClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
   end
   object btnAdd: TButton
     Left = 240
     Height = 25
+    Hint = 'Click here to add a new class above.'
     Top = 240
     Width = 32
     Caption = '+'
     OnClick = btnAddClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
   end
   object txtClasse: TEdit
     Left = 16
     Height = 23
+    Hint = 'Enter here the name of the new class to be add above.'
     Top = 240
     Width = 216
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 4
   end
   object btnRemove: TButton
     Left = 288
     Height = 25
+    Hint = 'Click here to remove a class selected above.'
     Top = 240
     Width = 32
     Caption = '-'
     OnClick = btnRemoveClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 5
   end
 end

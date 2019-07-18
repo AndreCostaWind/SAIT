@@ -6,16 +6,18 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls, CheckLst, StdCtrls, ComCtrls, Buttons, Windows, Messages, Variants,
-  frmhelp, LCLType, PopupNotifier, Types, uClasses, uGlobalVars, StrUtils, laz2_XMLRead, laz2_DOM;
+  frmhelp, LCLType, PopupNotifier, Types, uClasses, uGlobalVars, StrUtils, laz2_XMLRead, laz2_DOM, crt;
 
 type
 
   { TfrmPrincipal }
 
   TfrmPrincipal = class(TForm)
+    btnCropAllInList: TButton;
     btnHelp: TBitBtn;
     btnAnterior: TButton;
     btnAvante: TButton;
+    btnCrop: TButton;
     btnOpenDir: TButton;
     btnSalvar: TButton;
     btnLimpar: TButton;
@@ -23,7 +25,6 @@ type
     btnClearLastPoint: TButton;
     chCross: TCheckBox;
     chkMasks: TCheckBox;
-    PopupNotifier1: TPopupNotifier;
     gbAnnotation: TGroupBox;
     bgPattern: TGroupBox;
     chlImagens: TListBox;
@@ -39,6 +40,8 @@ type
     procedure btnAnteriorClick(Sender: TObject);
     procedure btnAvanteClick(Sender: TObject);
     procedure btnClearLastPointClick(Sender: TObject);
+    procedure btnCropAllInListClick(Sender: TObject);
+    procedure btnCropClick(Sender: TObject);
     procedure btnDelClick(Sender: TObject);
     procedure btnHelpClick(Sender: TObject);
     procedure btnLimparClick(Sender: TObject);
@@ -82,6 +85,7 @@ type
     procedure countAnnotation;
     procedure drawMaskFile;
     function IsPointInPolygon(AX, AY: Integer; APolygon: array of TPoint): Boolean;
+    procedure saveAllCrops;
 
   type
       quadrado = record
@@ -1282,6 +1286,89 @@ begin
     end;
 end;
 
+procedure TfrmPrincipal.saveAllCrops;
+var
+   tamanho: Integer;
+   contador: Integer;
+   largura: Integer;
+   altura: Integer;
+   imageTemp: TImage;
+   nomeSubDir: String;
+   nomeCompletoImagem: String;
+   nomeCaminhoCompleto: string;
+   nomeImagem: string;
+   contadorNomes: Integer;
+   existe: Boolean;
+   quadradoLocal: quadrado;
+   delta: Integer;
+
+begin
+  tamanho := Length(listaQuadrados);
+  if(tamanho > 0) then begin
+      showImage.Refresh;
+      for contador := 0 to (tamanho - 1) do begin
+          imageTemp := TImage.Create(Self);
+
+          quadradoLocal := listaQuadrados[contador];
+
+          ScrollBox1.HorzScrollBar.Position := round((quadradoLocal.pontoFim.x / 2));
+
+          delta := round((quadradoLocal.pontoFim.y / 2));
+          if(quadradoLocal.pontoFim.y >= ((showImage.Picture.Height / 3) * 2))then begin
+              delta := delta + 250; //180
+          end;
+          ScrollBox1.VertScrollBar.Position := delta;
+          ScrollBox1.Refresh;
+          delay(200);
+
+          quadradoLocal.pontoOrigem.x := quadradoLocal.pontoOrigem.x - ScrollBox1.HorzScrollBar.ScrollPos;
+          quadradoLocal.pontoOrigem.y := quadradoLocal.pontoOrigem.y - ScrollBox1.VertScrollBar.ScrollPos;
+          quadradoLocal.pontoFim.x := quadradoLocal.pontoFim.x - ScrollBox1.HorzScrollBar.ScrollPos;
+          quadradoLocal.pontoFim.y := quadradoLocal.pontoFim.y - ScrollBox1.VertScrollBar.ScrollPos;
+
+          largura := (quadradoLocal.pontoFim.x - quadradoLocal.pontoOrigem.x);
+          altura := (quadradoLocal.pontoFim.y - quadradoLocal.pontoOrigem.y);
+
+          imageTemp.Width := largura;
+          imageTemp.Height := altura;
+          imageTemp.Canvas.Copyrect(Rect(0, 0, largura, altura), showImage.Canvas,Rect(quadradoLocal.pontoOrigem.x, quadradoLocal.pontoOrigem.y, quadradoLocal.pontoFim.x, quadradoLocal.pontoFim.y));
+
+          nomeSubDir := quadradoLocal.className;
+          if(nomeSubDir = '') then begin
+              nomeSubDir := IntToStr(quadradoLocal.classID);
+          end;
+
+          nomeCaminhoCompleto := txtDir.Text + '\Croppeds';
+          if(not(DirectoryExists(nomeCaminhoCompleto)))then begin
+              CreateDir(nomeCaminhoCompleto);
+          end;
+          nomeCaminhoCompleto := txtDir.Text + '\Croppeds\' + nomeSubDir;
+          if(not(DirectoryExists(nomeCaminhoCompleto)))then begin
+              CreateDir(nomeCaminhoCompleto);
+          end;
+
+          contadorNomes := 0;
+          nomeImagem := nomeSubDir + '.jpg';
+          nomeCompletoImagem := nomeCaminhoCompleto + '\' + nomeImagem;
+          if FileExists(nomeCompletoImagem) then begin
+              existe := True;
+              while(existe = True) do begin
+                  nomeImagem := nomeSubDir + '(' + IntToStr(contadorNomes) + ').jpg';
+                  nomeCompletoImagem := nomeCaminhoCompleto + '\'  + nomeImagem;
+                  contadorNomes := contadorNomes + 1;
+                  existe := FileExists(nomeCompletoImagem);
+              end;
+          end;
+
+          imageTemp.Picture.SaveToFile(nomeCompletoImagem);
+          imageTemp.Free;
+
+      end;
+  end else begin
+      showCustomMessage('No annotations boxes found!!!', 3);
+  end;
+end;
+
 {%endregion}
 
 {%region 'Eventos'}
@@ -1462,6 +1549,26 @@ begin
   end;
 end;
 
+procedure TfrmPrincipal.btnCropAllInListClick(Sender: TObject);
+var
+   contador: Integer;
+
+begin
+     for contador := 0 to (chlImagens.Items.Count - 1) do begin
+         chlImagens.ItemIndex := contador;
+         loadImageService(txtDir.Text + '\' + chlImagens.Items[chlImagens.ItemIndex]);
+         delay(300);
+         saveAllCrops;
+     end;
+     showCustomMessage('Completed!!!', 2);
+end;
+
+procedure TfrmPrincipal.btnCropClick(Sender: TObject);
+begin
+    saveAllCrops;
+    showCustomMessage('Completed!!!', 2);
+end;
+
 procedure TfrmPrincipal.btnDelClick(Sender: TObject);
 var
    caminho: UnicodeString;
@@ -1513,7 +1620,8 @@ end;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
-     StatusBar1.Panels.Items[8].Text := '  Version: 0.1.0';
+     StatusBar1.Panels.Items[8].Text := '  Version: 0.1.1';
+     self.WindowState := wsMaximized;
 end;
 
 procedure TfrmPrincipal.btnOpenDirClick(Sender: TObject);

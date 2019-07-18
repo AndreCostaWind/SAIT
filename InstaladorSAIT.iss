@@ -23,10 +23,10 @@ AppSupportURL = {#MyAppURL}
 AppUpdatesURL = {#MyAppURL}
 DefaultDirName = {pf}\{#MyAppName}
 DisableProgramGroupPage = no
-;LicenseFile = C:\Deposito\Projetos\Produtos\AutoCom\instalador\licensa.txt
-OutputDir = C:\Deposito\Projetos\Produtos\Annotations\Fontes
+;LicenseFile = C:\Deposito\Projetos\Produtos\SAIT\Fontes\licensa.txt
+OutputDir = C:\Deposito\Projetos\Produtos\SAIT\Fontes
 OutputBaseFilename = SAIT_Installer
-SetupIconFile = C:\Deposito\Projetos\Produtos\Annotations\Fontes\SAIT.ico
+SetupIconFile = C:\Deposito\Projetos\Produtos\SAIT\Fontes\SAIT.ico
 Compression = lzma
 SolidCompression = yes
 PrivilegesRequired = admin
@@ -41,7 +41,7 @@ Name: "en"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; 
 
 [Files]
-Source: "C:\Deposito\Projetos\Produtos\Annotations\Fontes\SAIT.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Deposito\Projetos\Produtos\SAIT\Fontes\SAIT.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{#MyAppName}\{cm:ProgramOnTheWeb,{#MyAppPublisher}}"; Filename: "{#MyAppURL}"

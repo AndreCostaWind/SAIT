@@ -1,7 +1,7 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 110
+  Left = 185
   Height = 515
-  Top = 98
+  Top = 105
   Width = 763
   BorderStyle = bsSingle
   Caption = 'SAIT - Simple Annotation Image Tool'
@@ -52,21 +52,27 @@ object frmPrincipal: TfrmPrincipal
   object btnAnterior: TButton
     Left = 480
     Height = 25
+    Hint = 'Select the first previous image in the queue.'#13#10'Also saves the current annotation.'
     Top = 128
     Width = 32
     Anchors = [akTop, akRight]
     Caption = '<<'
     OnClick = btnAnteriorClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
   end
   object btnAvante: TButton
     Left = 520
     Height = 25
+    Hint = 'Select the first next image in the queue.'#13#10'Also saves the current annotation.'
     Top = 128
     Width = 32
     Anchors = [akTop, akRight]
     Caption = '>>'
     OnClick = btnAvanteClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
   end
   object txtDir: TEdit
@@ -81,22 +87,28 @@ object frmPrincipal: TfrmPrincipal
   object btnOpenDir: TButton
     Left = 673
     Height = 25
+    Hint = 'Select the directory containing the images to be tagged.'#13#10'The .xml files will be saved in the same location.'
     Top = 16
     Width = 75
     Anchors = [akTop, akRight]
     Caption = 'Open DIR'
     OnClick = btnOpenDirClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
   end
   object gbAnnotation: TGroupBox
     Left = 480
     Height = 74
+    Hint = 'Select the pattern where annotations will be saved.'
     Top = 48
     Width = 144
     Anchors = [akTop, akRight]
     Caption = 'Annotation'
     ClientHeight = 54
     ClientWidth = 140
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 4
     object rdbPV2012: TRadioButton
       Left = 8
@@ -118,22 +130,28 @@ object frmPrincipal: TfrmPrincipal
   object btnSalvar: TButton
     Left = 480
     Height = 25
-    Top = 164
+    Hint = 'Saves the current annotation.'
+    Top = 194
     Width = 48
     Anchors = [akTop, akRight]
     Caption = 'Save'
     OnClick = btnSalvarClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 5
   end
   object bgPattern: TGroupBox
     Left = 632
     Height = 73
+    Hint = 'Select the form of annotation.'#13#10'BoundBox for object classification and recognition.'#13#10'Polygonal for semantic segmentation.'
     Top = 48
     Width = 116
     Anchors = [akTop, akRight]
     Caption = 'Pattern'
     ClientHeight = 53
     ClientWidth = 112
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 6
     object rdbSquare: TRadioButton
       Left = 8
@@ -154,12 +172,15 @@ object frmPrincipal: TfrmPrincipal
   end
   object chlImagens: TListBox
     Left = 480
-    Height = 290
-    Top = 192
+    Height = 258
+    Hint = 'Click to select a particular image.'
+    Top = 224
     Width = 268
     Anchors = [akTop, akRight, akBottom]
     ItemHeight = 0
     OnClick = chlImagensClick
+    ParentShowHint = False
+    ShowHint = True
     Sorted = True
     TabOrder = 7
   end
@@ -201,22 +222,28 @@ object frmPrincipal: TfrmPrincipal
   object btnLimpar: TButton
     Left = 581
     Height = 25
-    Top = 164
+    Hint = 'Delete all annotation of the current image.'
+    Top = 194
     Width = 48
     Anchors = [akTop, akRight]
     Caption = 'ClearA'
     OnClick = btnLimparClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 9
   end
   object btnHelp: TBitBtn
     Left = 680
     Height = 25
-    Top = 164
+    Hint = 'Opens the help file.'
+    Top = 194
     Width = 68
     Anchors = [akTop, akRight]
     DefaultCaption = True
     Kind = bkHelp
     OnClick = btnHelpClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 10
   end
   object ScrollBox1: TScrollBox
@@ -253,56 +280,83 @@ object frmPrincipal: TfrmPrincipal
   object btnDel: TButton
     Left = 631
     Height = 25
-    Top = 164
+    Hint = 'Delete the current image and its annotation file.'
+    Top = 194
     Width = 48
     Anchors = [akTop, akRight]
     Caption = 'DEL'
     OnClick = btnDelClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 12
   end
   object btnClearLastPoint: TButton
     Left = 531
     Height = 25
-    Top = 164
+    Hint = 'Delete the last marked annotation point.'
+    Top = 194
     Width = 48
     Anchors = [akTop, akRight]
     Caption = 'ClearLP'
     OnClick = btnClearLastPointClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 13
   end
   object chkMasks: TCheckBox
     Left = 688
     Height = 19
+    Hint = 'Check this option to generate annotation mask files.'
     Top = 143
     Width = 53
     Anchors = [akTop, akRight]
     Caption = 'Masks'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 14
   end
   object chCross: TCheckBox
     Left = 688
     Height = 19
+    Hint = 'Check this option to display the point alignment cross.'
     Top = 124
     Width = 49
     Anchors = [akTop, akRight]
     Caption = 'Cross'
     Checked = True
+    ParentShowHint = False
+    ShowHint = True
     State = cbChecked
     TabOrder = 15
   end
+  object btnCrop: TButton
+    Left = 480
+    Height = 25
+    Hint = 'Click here to crop each object of the current image after the annotation. '#13#10'Only recognizes boundboxes.'
+    Top = 163
+    Width = 48
+    Anchors = [akTop, akRight]
+    Caption = 'Crop'
+    OnClick = btnCropClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 16
+  end
+  object btnCropAllInList: TButton
+    Left = 531
+    Height = 25
+    Hint = 'Click here to crop each object of all images lists in the current directory after performing all annotation. '#13#10'Only recognizes boundboxes.'
+    Top = 163
+    Width = 48
+    Anchors = [akTop, akRight]
+    Caption = 'CropA'
+    OnClick = btnCropAllInListClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 17
+  end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
     left = 536
-    top = 208
-  end
-  object PopupNotifier1: TPopupNotifier
-    Color = 14483455
-    Icon.Data = {
-      07544269746D617000000000
-    }
-    Text = 'Text'
-    Title = 'Caption'
-    Visible = False
-    left = 640
     top = 208
   end
 end

@@ -1,7 +1,7 @@
 object frmSobre: TfrmSobre
-  Left = 329
+  Left = 253
   Height = 507
-  Top = 104
+  Top = 99
   Width = 667
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -49,7 +49,7 @@ object frmSobre: TfrmSobre
   }
   Position = poOwnerFormCenter
   ShowInTaskBar = stNever
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.0.2.0'
   object Memo1: TMemo
     Left = 8
     Height = 432
@@ -78,6 +78,18 @@ object frmSobre: TfrmSobre
       '    If you detect any error, anomaly, bug or any worrying situation, please report it to us.'
       ''
       '    * Icon of program made by https://www.freepik.com and is licensed by http://creativecommons.org/licenses/by/3.0/'
+      ''
+      '    To draw a boundbox.'
+      '        Simply click anywhere on the image.'
+      '        Move the mouse and see the boundbox forming.'
+      '        Simply click to complete the boundbox.'
+      '        The window of setting the object class will then open.'
+      ''
+      '    To draw Polygons.'
+      '        Simply click anywhere on the image.'
+      '        Move the cursor over the object''s border and click each interesting change.'
+      '        A double-click closes the polygon.'
+      '        The window of setting the object class will then open.'
     )
     ParentFont = False
     ReadOnly = True
